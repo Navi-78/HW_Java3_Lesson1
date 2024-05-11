@@ -7,9 +7,12 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+
         String[] arr = {"Hello", "World"};
         doTask1(arr);
-
+        var check = doArrayList(arr);
+        check.add("Works");
+        System.out.println(check);
     }
 
     public static <T> void doTask1(T[] e) {
@@ -21,7 +24,9 @@ public class Main {
     }
 
     public static <T> List<T> doArrayList(T[] arr) {
+
         return new ArrayList<>(Arrays.asList(arr));
+
     }
 
 }
